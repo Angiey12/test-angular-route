@@ -1,0 +1,45 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <!-- <h1>
+        Welcome to {{ title }}!
+    </h1> -->
+    <h2><a [routerLink]="'/contacts'">Contacts</a></h2>
+
+    <form class="input-group occupation-nav-search-input">
+        <!-- <input class="form-control" type="search" placeholder="Search occupations, industries, career stories and career articles" aria-label="Search" [(ngModel)]="Keywords" [ngModelOptions]="{standalone: true}"> -->
+        <!-- <button class="btn" type="submit" class="btn-occupation-search btn-primary px-4" (click)="gosearch(Keywords)">Search -></button> -->
+        <!-- <button class="btn" type="submit" class="btn-occupation-search btn-primary px-4" [routerLink]="['/contact', Keywords]">Search -></button> -->
+
+        <!-- <button class="btn" type="submit" class="btn-occupation-search btn-primary px-4" (click)="onSearch(search.value)">Search -></button> -->
+    </form>
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="search" class="form-control" placeholder="Enter search string" #search>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="onSearch(search.value)">
+          Search
+        </button>
+    </form>
+    <!-- <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let contact of contacts">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>
+                <a [routerLink]="['/contact', contact.id]">Go to details</a>
+            </td>
+        </tr>
+    </table> -->
+    <!-- <div *ngFor="let article of articles">
+        <h2>{{article.title}}</h2>
+
+        <p>
+            {{article.description}}
+        </p>
+        <a href="{{article.url}}">Read full article</a>
+    </div> -->
+    <router-outlet></router-outlet>
